@@ -1,0 +1,139 @@
+/* Background */
+body {
+    background-image: url("https://m.media-amazon.com/images/I/81F9ZETG59L.jpg");
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-repeat: repeat;
+    background-size: cover;
+}
+.headline {
+    background-color: white; /* semi-transparent black */
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 30px;
+}
+/* Title */
+h1 {
+    color:#E60023;
+    margin-top: 30px;
+}
+
+/* Description text */
+.description {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+/* Form container (box model) */
+.form-box {
+    background-color: white;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 0px;
+    border: 2px solid #ccc;
+    text-align: left;
+}
+
+/* Label */
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}
+
+/* Input fields */
+.input-box {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #999;
+    font-size: 15px;
+}
+
+/* Button styling */
+#submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#submit-btn:hover {
+    background-color: #43a047;
+}
+
+/* Image styling */
+/* Gallery (flexbox) */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* space between items */
+    justify-content: center; /* center the row */
+    align-items: flex-start;
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+
+}
+
+.gallery-item {
+    /* flex: grow shrink basis - the basis sets a preferred size */
+    flex: 1 1 260px; /* items will try to be at least 260px wide, shrink as needed */
+    max-width: 320px; /* cap the width so very wide screens don't make them huge */
+    background: black;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    text-align: left;
+    padding: 25px;
+
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.gallery-item figcaption {
+    padding: 10px 12px;
+    font-size: 14px;
+    color: white;
+}
+
+.gallery-item:hover {
+    transform: translateY(-6px);
+    transition: transform 200ms ease;
+}
+
+/* Responsive tweaks */
+@media (max-width: 720px) {
+    .gallery {
+        gap: 12px;
+        padding: 20px 12px;
+    }
+    .gallery-item {
+        flex: 1 1 45%; /* two columns on small screens */
+    }
+}
+
+@media (max-width: 420px) {
+    .gallery-item { flex: 1 1 100%; }
+}
+
+/* Legacy single-image class kept for backward compatibility if used elsewhere */
+.sample-image {
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
